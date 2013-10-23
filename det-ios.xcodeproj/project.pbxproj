@@ -22,11 +22,6 @@
 		08CB068818173A2900C96236 /* det_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB068718173A2900C96236 /* det_iosTests.m */; };
 		08CB069218173AB700C96236 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB069118173AB700C96236 /* CoreData.framework */; };
 		08CB069818173C7B00C96236 /* det.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08CB069618173C7B00C96236 /* det.xcdatamodeld */; };
-		08CB06A21817414200C96236 /* DTAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB069B1817414200C96236 /* DTAPI.m */; };
-		08CB06A31817414200C96236 /* DTDebt.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB069D1817414200C96236 /* DTDebt.m */; };
-		08CB06A41817414200C96236 /* DTTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB069F1817414200C96236 /* DTTransaction.m */; };
-		08CB06A51817414200C96236 /* DTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB06A11817414200C96236 /* DTUser.m */; };
-		08CB3FDF1817416D00D1F3F7 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FDE1817416D00D1F3F7 /* UserInfo.m */; };
 		08CB3FE11817427C00D1F3F7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FE01817427B00D1F3F7 /* Parse.framework */; };
 		08CB3FE31817428C00D1F3F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FE21817428C00D1F3F7 /* AudioToolbox.framework */; };
 		08CB3FE51817429100D1F3F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FE41817429100D1F3F7 /* CFNetwork.framework */; };
@@ -39,6 +34,10 @@
 		08CB3FF3181742C500D1F3F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FF2181742C500D1F3F7 /* SystemConfiguration.framework */; };
 		08CB3FF51817455000D1F3F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FF41817455000D1F3F7 /* FacebookSDK.framework */; };
 		08CB3FF918174C8800D1F3F7 /* DTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */; };
+		08CB40031817C82300D1F3F7 /* DTAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FFC1817C82300D1F3F7 /* DTAPI.m */; };
+		08CB40041817C82300D1F3F7 /* DTDebt.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FFE1817C82300D1F3F7 /* DTDebt.m */; };
+		08CB40051817C82300D1F3F7 /* DTTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB40001817C82300D1F3F7 /* DTTransaction.m */; };
+		08CB40061817C82300D1F3F7 /* DTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB40021817C82300D1F3F7 /* DTUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,16 +71,6 @@
 		08CB068718173A2900C96236 /* det_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = det_iosTests.m; sourceTree = "<group>"; };
 		08CB069118173AB700C96236 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		08CB069718173C7B00C96236 /* det.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = det.xcdatamodel; sourceTree = "<group>"; };
-		08CB069A1817414200C96236 /* DTAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTAPI.h; path = ../../../../Dropbox/iOS/det/det/Models/DTAPI.h; sourceTree = "<group>"; };
-		08CB069B1817414200C96236 /* DTAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTAPI.m; path = ../../../../Dropbox/iOS/det/det/Models/DTAPI.m; sourceTree = "<group>"; };
-		08CB069C1817414200C96236 /* DTDebt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDebt.h; path = ../../../../Dropbox/iOS/det/det/Models/DTDebt.h; sourceTree = "<group>"; };
-		08CB069D1817414200C96236 /* DTDebt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDebt.m; path = ../../../../Dropbox/iOS/det/det/Models/DTDebt.m; sourceTree = "<group>"; };
-		08CB069E1817414200C96236 /* DTTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTransaction.h; path = ../../../../Dropbox/iOS/det/det/Models/DTTransaction.h; sourceTree = "<group>"; };
-		08CB069F1817414200C96236 /* DTTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTransaction.m; path = ../../../../Dropbox/iOS/det/det/Models/DTTransaction.m; sourceTree = "<group>"; };
-		08CB06A01817414200C96236 /* DTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTUser.h; path = ../../../../Dropbox/iOS/det/det/Models/DTUser.h; sourceTree = "<group>"; };
-		08CB06A11817414200C96236 /* DTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTUser.m; path = ../../../../Dropbox/iOS/det/det/Models/DTUser.m; sourceTree = "<group>"; };
-		08CB3FDD1817416D00D1F3F7 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = ../../../../Dropbox/iOS/det/det/UserInfo.h; sourceTree = "<group>"; };
-		08CB3FDE1817416D00D1F3F7 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = ../../../../Dropbox/iOS/det/det/UserInfo.m; sourceTree = "<group>"; };
 		08CB3FE01817427B00D1F3F7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		08CB3FE21817428C00D1F3F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		08CB3FE41817429100D1F3F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -95,6 +84,14 @@
 		08CB3FF41817455000D1F3F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		08CB3FF718174C8800D1F3F7 /* DTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLoginViewController.h; sourceTree = "<group>"; };
 		08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTLoginViewController.m; sourceTree = "<group>"; };
+		08CB3FFB1817C82300D1F3F7 /* DTAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAPI.h; sourceTree = "<group>"; };
+		08CB3FFC1817C82300D1F3F7 /* DTAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAPI.m; sourceTree = "<group>"; };
+		08CB3FFD1817C82300D1F3F7 /* DTDebt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDebt.h; sourceTree = "<group>"; };
+		08CB3FFE1817C82300D1F3F7 /* DTDebt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDebt.m; sourceTree = "<group>"; };
+		08CB3FFF1817C82300D1F3F7 /* DTTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTransaction.h; sourceTree = "<group>"; };
+		08CB40001817C82300D1F3F7 /* DTTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTransaction.m; sourceTree = "<group>"; };
+		08CB40011817C82300D1F3F7 /* DTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUser.h; sourceTree = "<group>"; };
+		08CB40021817C82300D1F3F7 /* DTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +175,8 @@
 		08CB066218173A2900C96236 /* det-ios */ = {
 			isa = PBXGroup;
 			children = (
+				08CB3FFA1817C82300D1F3F7 /* Models */,
 				08CB3FF618174C6100D1F3F7 /* Views */,
-				08CB06991817411C00C96236 /* models */,
 				08CB066B18173A2900C96236 /* DTAppDelegate.h */,
 				08CB066C18173A2900C96236 /* DTAppDelegate.m */,
 				08CB067118173A2900C96236 /* DTViewController.h */,
@@ -220,23 +217,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08CB06991817411C00C96236 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				08CB3FDD1817416D00D1F3F7 /* UserInfo.h */,
-				08CB3FDE1817416D00D1F3F7 /* UserInfo.m */,
-				08CB069A1817414200C96236 /* DTAPI.h */,
-				08CB069B1817414200C96236 /* DTAPI.m */,
-				08CB069C1817414200C96236 /* DTDebt.h */,
-				08CB069D1817414200C96236 /* DTDebt.m */,
-				08CB069E1817414200C96236 /* DTTransaction.h */,
-				08CB069F1817414200C96236 /* DTTransaction.m */,
-				08CB06A01817414200C96236 /* DTUser.h */,
-				08CB06A11817414200C96236 /* DTUser.m */,
-			);
-			name = models;
-			sourceTree = "<group>";
-		};
 		08CB3FF618174C6100D1F3F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +224,21 @@
 				08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		08CB3FFA1817C82300D1F3F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08CB3FFB1817C82300D1F3F7 /* DTAPI.h */,
+				08CB3FFC1817C82300D1F3F7 /* DTAPI.m */,
+				08CB3FFD1817C82300D1F3F7 /* DTDebt.h */,
+				08CB3FFE1817C82300D1F3F7 /* DTDebt.m */,
+				08CB3FFF1817C82300D1F3F7 /* DTTransaction.h */,
+				08CB40001817C82300D1F3F7 /* DTTransaction.m */,
+				08CB40011817C82300D1F3F7 /* DTUser.h */,
+				08CB40021817C82300D1F3F7 /* DTUser.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,15 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CB40051817C82300D1F3F7 /* DTTransaction.m in Sources */,
+				08CB40031817C82300D1F3F7 /* DTAPI.m in Sources */,
 				08CB3FF918174C8800D1F3F7 /* DTLoginViewController.m in Sources */,
+				08CB40041817C82300D1F3F7 /* DTDebt.m in Sources */,
 				08CB066D18173A2900C96236 /* DTAppDelegate.m in Sources */,
-				08CB3FDF1817416D00D1F3F7 /* UserInfo.m in Sources */,
 				08CB069818173C7B00C96236 /* det.xcdatamodeld in Sources */,
-				08CB06A51817414200C96236 /* DTUser.m in Sources */,
-				08CB06A31817414200C96236 /* DTDebt.m in Sources */,
-				08CB06A21817414200C96236 /* DTAPI.m in Sources */,
 				08CB067318173A2900C96236 /* DTViewController.m in Sources */,
-				08CB06A41817414200C96236 /* DTTransaction.m in Sources */,
+				08CB40061817C82300D1F3F7 /* DTUser.m in Sources */,
 				08CB066918173A2900C96236 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
