@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTViewController : UIViewController
+@interface DTViewController : UIViewController {
+}
+
 
 @end
