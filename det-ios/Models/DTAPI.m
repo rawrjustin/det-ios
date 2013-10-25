@@ -49,10 +49,14 @@
              PFQuery *query = [PFUser query];
              [query whereKey:@"fbID" equalTo:user.id];
              PFUser *pf_user = (PFUser*)[query getFirstObject];
-             if (pf_user) {
-                 FBAccessTokenData *token = [[PFFacebookUtils session] accessTokenData];
-                 [PFFacebookUtils linkUser:newFBUser facebookId:user.id accessToken:[token accessToken] expirationDate:[token expirationDate] block:^(BOOL succeeded, NSError *error) {
-      
+             if (pf_user && ![PFFacebookUtils isLinkedWithUser:pf_user]) {
+                 [newFBUser deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                     FBAccessTokenData *token = [[FBSession activeSession] accessTokenData];
+                     [PFUser logInWithUsernameInBackground:pf_user.username password:@"password" block:^(PFUser *newUser, NSError *error) {
+                         [PFFacebookUtils linkUser:newUser facebookId:[user objectForKey:@"id"] accessToken:[token accessToken] expirationDate:[token expirationDate] block:^(BOOL succeeded, NSError *error) {
+                             [DTAPI linkUser:[PFUser currentUser]];
+                         }];
+                     }];
                  }];
              } else {
                  [newFBUser setObject:[user objectForKey:@"email"] forKey:@"email"];

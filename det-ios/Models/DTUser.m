@@ -106,12 +106,12 @@
     [query whereKey:@"fbID" equalTo:fbID];
     PFUser *pf_user = (PFUser*)[query getFirstObject];
     if (pf_user) {
-        [PFUser logInWithUsername:pf_user.username password:@"abc"];
+        [PFUser logInWithUsername:pf_user.username password:@"password"];
         [pf_user setObject:email forKey:@"email"];
         [pf_user save];
     } else {
         DTUser *newUser = [[DTUser alloc] initDefaultWithFacebookID:fbID andName:name andEmail:email];
-        [PFUser logInWithUsername:newUser.username password:@"abc"];
+        [PFUser logInWithUsername:newUser.username password:@"password"];
     }
     //[[NSNotificationCenter defaultCenter] postNotificationName:nParseLoggedIn object:self];
 }
