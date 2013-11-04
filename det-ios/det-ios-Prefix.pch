@@ -17,3 +17,6 @@
     #import <Parse/Parse.h>
     #import <FacebookSDK/FacebookSDK.h>
 #endif
+
+#define kIOSKeyboardHeight 216.0
+#define kButtonHeight 50.0

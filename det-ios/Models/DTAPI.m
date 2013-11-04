@@ -14,7 +14,7 @@
 @implementation DTAPI
 
 
-- (void)debtList:(void (^)(NSArray* debts))block {
++ (void)debtList:(void (^)(NSArray* debts))block {
     NSMutableArray* debtList = [NSMutableArray new];
     
     PFQuery *asDebtorQuery = [PFQuery queryWithClassName:@"Debt"];

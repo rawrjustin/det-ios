@@ -10,12 +10,14 @@
 
 @protocol DTTransactionDelegate
 - (void)revealTransactionInput;
+- (void)cancelTransaction;
 @end
 
 @interface DTTransactionView : UIView
 
 @property (nonatomic, unsafe_unretained) id<DTTransactionDelegate> delegate;
-@property (nonatomic, strong) UILabel *amount;
+@property (nonatomic, strong) UITextField *amount;
 @property (nonatomic, strong) UITextField *description;
 
+- (void)resetScreens;
 @end

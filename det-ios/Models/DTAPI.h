@@ -10,7 +10,7 @@
 
 @interface DTAPI : NSObject
 
-- (void)debtList:(void (^)(NSArray* debts))block;
++ (void)debtList:(void (^)(NSArray* debts))block;
 //- (void)friendsList:(void (^)(NSArray* friends))block;
 + (void)linkUser:(PFUser*)newFBUser;
 @end

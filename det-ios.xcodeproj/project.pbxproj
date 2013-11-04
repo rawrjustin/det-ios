@@ -13,7 +13,6 @@
 		08CB066718173A2900C96236 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CB066518173A2900C96236 /* InfoPlist.strings */; };
 		08CB066918173A2900C96236 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB066818173A2900C96236 /* main.m */; };
 		08CB066D18173A2900C96236 /* DTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB066C18173A2900C96236 /* DTAppDelegate.m */; };
-		08CB067318173A2900C96236 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB067218173A2900C96236 /* DTViewController.m */; };
 		08CB067518173A2900C96236 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CB067418173A2900C96236 /* Images.xcassets */; };
 		08CB067C18173A2900C96236 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB067B18173A2900C96236 /* XCTest.framework */; };
 		08CB067D18173A2900C96236 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB065C18173A2900C96236 /* Foundation.framework */; };
@@ -38,6 +37,9 @@
 		08CB40041817C82300D1F3F7 /* DTDebt.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FFE1817C82300D1F3F7 /* DTDebt.m */; };
 		08CB40051817C82300D1F3F7 /* DTTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB40001817C82300D1F3F7 /* DTTransaction.m */; };
 		08CB40061817C82300D1F3F7 /* DTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB40021817C82300D1F3F7 /* DTUser.m */; };
+		08CB4091181A4B4D00D1F3F7 /* DTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4090181A4B4D00D1F3F7 /* DTHomeViewController.m */; };
+		08CB4094181A4C1B00D1F3F7 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4093181A4C1B00D1F3F7 /* UserInfo.m */; };
+		08CB4098181A5A7A00D1F3F7 /* DTTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,6 @@
 		08CB066A18173A2900C96236 /* det-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "det-ios-Prefix.pch"; sourceTree = "<group>"; };
 		08CB066B18173A2900C96236 /* DTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppDelegate.h; sourceTree = "<group>"; };
 		08CB066C18173A2900C96236 /* DTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppDelegate.m; sourceTree = "<group>"; };
-		08CB067118173A2900C96236 /* DTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
-		08CB067218173A2900C96236 /* DTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
 		08CB067418173A2900C96236 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		08CB067A18173A2900C96236 /* det-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "det-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CB067B18173A2900C96236 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -92,6 +92,12 @@
 		08CB40001817C82300D1F3F7 /* DTTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTransaction.m; sourceTree = "<group>"; };
 		08CB40011817C82300D1F3F7 /* DTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUser.h; sourceTree = "<group>"; };
 		08CB40021817C82300D1F3F7 /* DTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTUser.m; sourceTree = "<group>"; };
+		08CB408F181A4B4D00D1F3F7 /* DTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHomeViewController.h; sourceTree = "<group>"; };
+		08CB4090181A4B4D00D1F3F7 /* DTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHomeViewController.m; sourceTree = "<group>"; };
+		08CB4092181A4C1B00D1F3F7 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		08CB4093181A4C1B00D1F3F7 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		08CB4096181A5A7A00D1F3F7 /* DTTransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTransactionView.h; path = Views/DTTransactionView.h; sourceTree = "<group>"; };
+		08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTransactionView.m; path = Views/DTTransactionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,12 +181,11 @@
 		08CB066218173A2900C96236 /* det-ios */ = {
 			isa = PBXGroup;
 			children = (
+				08CB4095181A5A5F00D1F3F7 /* Views */,
 				08CB3FFA1817C82300D1F3F7 /* Models */,
-				08CB3FF618174C6100D1F3F7 /* Views */,
+				08CB3FF618174C6100D1F3F7 /* ViewControllers */,
 				08CB066B18173A2900C96236 /* DTAppDelegate.h */,
 				08CB066C18173A2900C96236 /* DTAppDelegate.m */,
-				08CB067118173A2900C96236 /* DTViewController.h */,
-				08CB067218173A2900C96236 /* DTViewController.m */,
 				08CB067418173A2900C96236 /* Images.xcassets */,
 				08CB066318173A2900C96236 /* Supporting Files */,
 			);
@@ -217,18 +222,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08CB3FF618174C6100D1F3F7 /* Views */ = {
+		08CB3FF618174C6100D1F3F7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				08CB3FF718174C8800D1F3F7 /* DTLoginViewController.h */,
 				08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */,
+				08CB408F181A4B4D00D1F3F7 /* DTHomeViewController.h */,
+				08CB4090181A4B4D00D1F3F7 /* DTHomeViewController.m */,
 			);
-			name = Views;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		08CB3FFA1817C82300D1F3F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				08CB4092181A4C1B00D1F3F7 /* UserInfo.h */,
+				08CB4093181A4C1B00D1F3F7 /* UserInfo.m */,
 				08CB3FFB1817C82300D1F3F7 /* DTAPI.h */,
 				08CB3FFC1817C82300D1F3F7 /* DTAPI.m */,
 				08CB3FFD1817C82300D1F3F7 /* DTDebt.h */,
@@ -239,6 +248,15 @@
 				08CB40021817C82300D1F3F7 /* DTUser.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		08CB4095181A5A5F00D1F3F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08CB4096181A5A7A00D1F3F7 /* DTTransactionView.h */,
+				08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +361,12 @@
 				08CB3FF918174C8800D1F3F7 /* DTLoginViewController.m in Sources */,
 				08CB40041817C82300D1F3F7 /* DTDebt.m in Sources */,
 				08CB066D18173A2900C96236 /* DTAppDelegate.m in Sources */,
+				08CB4091181A4B4D00D1F3F7 /* DTHomeViewController.m in Sources */,
 				08CB069818173C7B00C96236 /* det.xcdatamodeld in Sources */,
-				08CB067318173A2900C96236 /* DTViewController.m in Sources */,
+				08CB4094181A4C1B00D1F3F7 /* UserInfo.m in Sources */,
 				08CB40061817C82300D1F3F7 /* DTUser.m in Sources */,
 				08CB066918173A2900C96236 /* main.m in Sources */,
+				08CB4098181A5A7A00D1F3F7 /* DTTransactionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

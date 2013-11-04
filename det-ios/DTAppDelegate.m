@@ -8,7 +8,7 @@
 
 #import "DTAppDelegate.h"
 #import "DTLoginViewController.h"
-#import "DTViewController.h"
+#import "DTHomeViewController.h"
 #import <Parse/Parse.h>
 @implementation DTAppDelegate
 
@@ -25,7 +25,7 @@
     [PFFacebookUtils initializeFacebook];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
-    DTViewController *controller = [[DTViewController alloc] init];
+    DTHomeViewController *controller = [[DTHomeViewController alloc] init];
     
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
