@@ -31,7 +31,6 @@
 		08CB3FEF181742BA00D1F3F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FEE181742BA00D1F3F7 /* Security.framework */; };
 		08CB3FF1181742BF00D1F3F7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FF0181742BF00D1F3F7 /* StoreKit.framework */; };
 		08CB3FF3181742C500D1F3F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FF2181742C500D1F3F7 /* SystemConfiguration.framework */; };
-		08CB3FF51817455000D1F3F7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CB3FF41817455000D1F3F7 /* FacebookSDK.framework */; };
 		08CB3FF918174C8800D1F3F7 /* DTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */; };
 		08CB40031817C82300D1F3F7 /* DTAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FFC1817C82300D1F3F7 /* DTAPI.m */; };
 		08CB40041817C82300D1F3F7 /* DTDebt.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB3FFE1817C82300D1F3F7 /* DTDebt.m */; };
@@ -40,6 +39,7 @@
 		08CB4091181A4B4D00D1F3F7 /* DTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4090181A4B4D00D1F3F7 /* DTHomeViewController.m */; };
 		08CB4094181A4C1B00D1F3F7 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4093181A4C1B00D1F3F7 /* UserInfo.m */; };
 		08CB4098181A5A7A00D1F3F7 /* DTTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */; };
+		CCD2BE541835EDA000CC2389 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2BE531835EDA000CC2389 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +81,6 @@
 		08CB3FEE181742BA00D1F3F7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		08CB3FF0181742BF00D1F3F7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		08CB3FF2181742C500D1F3F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		08CB3FF41817455000D1F3F7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		08CB3FF718174C8800D1F3F7 /* DTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLoginViewController.h; sourceTree = "<group>"; };
 		08CB3FF818174C8800D1F3F7 /* DTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTLoginViewController.m; sourceTree = "<group>"; };
 		08CB3FFB1817C82300D1F3F7 /* DTAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAPI.h; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		08CB4093181A4C1B00D1F3F7 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		08CB4096181A5A7A00D1F3F7 /* DTTransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTransactionView.h; path = Views/DTTransactionView.h; sourceTree = "<group>"; };
 		08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTransactionView.m; path = Views/DTTransactionView.m; sourceTree = "<group>"; };
+		CCD2BE531835EDA000CC2389 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +116,8 @@
 				08CB3FE51817429100D1F3F7 /* CFNetwork.framework in Frameworks */,
 				08CB3FE31817428C00D1F3F7 /* AudioToolbox.framework in Frameworks */,
 				08CB069218173AB700C96236 /* CoreData.framework in Frameworks */,
-				08CB3FF51817455000D1F3F7 /* FacebookSDK.framework in Frameworks */,
 				08CB066118173A2900C96236 /* UIKit.framework in Frameworks */,
+				CCD2BE541835EDA000CC2389 /* FacebookSDK.framework in Frameworks */,
 				08CB065D18173A2900C96236 /* Foundation.framework in Frameworks */,
 				08CB3FE11817427C00D1F3F7 /* Parse.framework in Frameworks */,
 			);
@@ -158,7 +158,7 @@
 		08CB065B18173A2900C96236 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08CB3FF41817455000D1F3F7 /* FacebookSDK.framework */,
+				CCD2BE531835EDA000CC2389 /* FacebookSDK.framework */,
 				08CB3FF2181742C500D1F3F7 /* SystemConfiguration.framework */,
 				08CB3FF0181742BF00D1F3F7 /* StoreKit.framework */,
 				08CB3FEE181742BA00D1F3F7 /* Security.framework */,
@@ -489,6 +489,7 @@
 					"$(inherited)",
 					"/Users/justinhuang/Projects/hacks/det-ios",
 					/Users/justinhuang/Documents/FacebookSDK,
+					"/Users/rawrjustin/Desktop/det-ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "det-ios/det-ios-Prefix.pch";
@@ -507,6 +508,7 @@
 					"$(inherited)",
 					"/Users/justinhuang/Projects/hacks/det-ios",
 					/Users/justinhuang/Documents/FacebookSDK,
+					"/Users/rawrjustin/Desktop/det-ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "det-ios/det-ios-Prefix.pch";
