@@ -28,13 +28,48 @@
     return self;
 }
 
+/*
+{
+    "123": {
+        "name": "justin",
+        "email": "justingotemail@gmail.com",
+        "amount": 50
+    },
+    “456”: {
+        ...
+        
+    }
+    "fbIdentifiers": [
+                      "123", “456”
+                      ],
+    "creditor": "9t6UZpDJnp",
+    "description": "CLOUD CODE WORKS"
+}
+ */
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self pullData];
+    //[self pullData];
     [self setupTableView];
     [self setupTransactionView];
-	// Do any additional setup after loading the view.
+    /*
+    [PFCloud callFunctionInBackground:@"createTransaction"
+                       withParameters:@{@"123": @{
+                                                @"name":    @"justin",
+                                                @"email":   @"justingotemail@gmail.com",
+                                                @"amount":  @50
+                                        },
+                                        @"fbIdentifiers":   @[@"123"],
+                                        @"creditor":    @"9t6UZpDJnp",
+                                        @"description": @"Cloud code works"
+                                        }
+                                block:^(NSNumber *ratings, NSError *error) {
+                                    if (!error) {
+                                        
+                                    }
+                                }];
+     */
 }
 
 - (void)pullData {

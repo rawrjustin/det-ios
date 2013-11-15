@@ -7,9 +7,11 @@
 //
 #define kLayoutDescriptionOrigin [UIScreen mainScreen].bounds.size.height - kIOSKeyboardHeight - kButtonHeight
 #define kLayoutDebtorOrigin [UIScreen mainScreen].bounds.size.height - kIOSKeyboardHeight - kButtonHeight * 2
+
 #import "DTTransactionView.h"
 #import "DTTransaction.h"
 #import "DTUser.h"
+
 @interface DTTransactionView()
 @property (nonatomic, strong) UIButton *cancelButton;
 
@@ -40,8 +42,11 @@
 
 - (void)layoutSubviews {
     
-    // Amount
+    //  *************
+    //  Amount
+    //  *************
     
+    //  StartButton
     UIButton *startTransaction = [UIButton buttonWithType:UIButtonTypeCustom];
     startTransaction.frame = CGRectMake(0, 0, 320, kButtonHeight);
     [startTransaction setTitle:@"How much did you pay?" forState:UIControlStateNormal];
@@ -62,6 +67,7 @@
     self.amount.textAlignment = NSTextAlignmentCenter;
     self.amount.font = [UIFont systemFontOfSize:30.0];
     [self addSubview:self.amount];
+    
     
     // Description
     
