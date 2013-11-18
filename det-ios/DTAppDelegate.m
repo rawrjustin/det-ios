@@ -24,12 +24,14 @@
     //Parse Facebook
     [PFFacebookUtils initializeFacebook];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     DTHomeViewController *controller = [[DTHomeViewController alloc] init];
-    
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
-
+    
+    
     if ([PFUser currentUser] && // Check if a user is cached
         [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
     {
@@ -39,7 +41,7 @@
             if (!error) {
                 // handle successful response
                 // dismiss the login flow.
-            } else if ([error.userInfo[FBErrorParsedJSONResponseKey][@"body"][@"error"][@"type"] isEqualToString:@"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
+            } else if ([error.userInfo[FBErrorParsedJSONResponseKey][@"body"][@"error"][@"type"] isEqualToString:@"OAuthException"]) { // Since the request failed, we can check if it was due to an po session
                 NSLog(@"The facebook session was invalidated");
                 [PFUser logOut];
                 DTLoginViewController *login = [[DTLoginViewController alloc] init];
@@ -52,6 +54,7 @@
         DTLoginViewController *login = [[DTLoginViewController alloc] init];
         [self.window.rootViewController presentViewController:login animated:NO completion:nil];
     }
+    
     return YES;
 }
 							

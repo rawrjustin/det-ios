@@ -84,8 +84,12 @@
 
 + (DTUser*)getCurrentUser {
     PFUser *current_pf_user = [PFUser currentUser];
-    DTUser *current_user = [[DTUser alloc] initWithPFUser:current_pf_user];
-    return current_user;
+    if (current_pf_user) {
+        DTUser *current_user = [[DTUser alloc] initWithPFUser:current_pf_user];
+        return current_user;
+    } else {
+        return nil;
+    }
 }
 
 + (DTUser*)getOrCreateUserWithFacebookID:(NSString*)fbID andName:(NSString *)name {

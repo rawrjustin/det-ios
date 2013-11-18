@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DTTransactionView.h"
 
-@interface DTHomeViewController : UIViewController<DTTransactionDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface DTHomeViewController : UIViewController<DTTransactionDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+
 
 
 @end

@@ -68,7 +68,6 @@
     self.amount.font = [UIFont systemFontOfSize:30.0];
     [self addSubview:self.amount];
     
-    
     // Description
     
     self.descriptionView = [[UIView alloc] initWithFrame:CGRectMake(0, kLayoutDescriptionOrigin, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - kButtonHeight)];

@@ -23,39 +23,51 @@
         //instance.userLinks = [NSMutableDictionary dictionaryWithDictionary:[defaults objectForKey:@"SAVED.userLinks"]];
         instance.userLinks = [NSMutableDictionary dictionary];
         instance.sortedKeys = [NSArray arrayWithArray:[defaults objectForKey:@"SAVED.sortedKeys"]];
-        
-        NSLog(@"debts: %@", instance.debts);
+//        instance.debts = [NSMutableDictionary dictionary];
+//        instance.sortedKeys = [NSArray array];
+//        instance.userLinks = [NSMutableDictionary dictionary];
     }
     return instance;
 }
 
 - (void)parseDebtData:(NSArray*)data {
     NSString *myFBid = [DTUser getCurrentUser].facebookID;
+    NSMutableDictionary *debtCopy = [NSMutableDictionary dictionary];
+    
     for (DTDebt *debt in data) {
         if ([debt.debtor.facebookID isEqualToString:myFBid]) {
             [self.userLinks setObject:debt.creditor forKey:debt.creditor.facebookID];
 
-            NSNumber *amount = [self.debts objectForKey:debt.creditor.facebookID];
+            NSNumber *amount = [[debtCopy objectForKey:debt.creditor.facebookID] objectForKey:@"amount"];
             if (amount) {
-                [self.debts setObject:[NSNumber numberWithDouble:[amount doubleValue] - debt.amount] forKey:debt.creditor.facebookID];
+                NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:[amount doubleValue] - debt.amount],
+                                                 @"name" : debt.creditor.name};
+                [debtCopy setObject:debtDictionary forKey:debt.creditor.facebookID];
             } else {
-                [self.debts setObject:[NSNumber numberWithDouble:-debt.amount] forKey:debt.creditor.facebookID];
+                NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:-debt.amount],
+                                                 @"name" : debt.creditor.name};
+                [debtCopy setObject:debtDictionary forKey:debt.creditor.facebookID];
             }
         } else if ([debt.creditor.facebookID isEqualToString:myFBid]){
             [self.userLinks setObject:debt.debtor forKey:debt.debtor.facebookID];
 
-            NSNumber *amount = [self.debts objectForKey:debt.debtor.facebookID];
+            NSNumber *amount = [[debtCopy objectForKey:debt.debtor.facebookID] objectForKey:@"amount"];
 
             if (amount) {
-                [self.debts setObject:[NSNumber numberWithDouble:[amount doubleValue] + debt.amount] forKey:debt.debtor.facebookID];
+                NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:[amount doubleValue] + debt.amount],
+                                                 @"name" : debt.debtor.name};
+                [debtCopy setObject:debtDictionary forKey:debt.debtor.facebookID];
             } else {
-                [self.debts setObject:[NSNumber numberWithDouble:debt.amount] forKey:debt.debtor.facebookID];
+                NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:debt.amount],
+                                                 @"name" : debt.debtor.name};
+                [debtCopy setObject:debtDictionary forKey:debt.debtor.facebookID];
             }
         } else {
             NSLog(@"SOMETHING WENT WRONG IN USERINFO");
         }
     }
-    self.sortedKeys = [self.debts keysSortedByValueUsingSelector:@selector(compare:)];
+    self.debts = debtCopy;
+    self.sortedKeys = [self.debts allKeys];
     [self save];
 }
 

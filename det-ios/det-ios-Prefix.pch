@@ -14,8 +14,11 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import <QuartzCore/QuartzCore.h>
     #import <Parse/Parse.h>
     #import <FacebookSDK/FacebookSDK.h>
+    #import "DTColors.h"
+    #import "DTFonts.h"
 #endif
 
 #define kIOSKeyboardHeight 216.0

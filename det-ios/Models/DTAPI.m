@@ -26,7 +26,7 @@
     [debtQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
             for (PFObject *pfDebt in objects) {
                 DTDebt* debt = [[DTDebt alloc] initWithPFObject:pfDebt];
                 [debtList addObject:debt];
