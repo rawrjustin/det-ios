@@ -41,6 +41,9 @@
 		08CB4098181A5A7A00D1F3F7 /* DTTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */; };
 		6F6296FBE7074E1FB388551B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122F87FC6A6446D2B17762A2 /* libPods.a */; };
 		CC8CB51F185B1D8400D0CD9D /* DTGreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8CB51E185B1D8400D0CD9D /* DTGreenButton.m */; };
+		CC8CB524185B21AC00D0CD9D /* det_icon_60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8CB521185B21AC00D0CD9D /* det_icon_60x60@2x.png */; };
+		CC8CB525185B21AC00D0CD9D /* det_icon_29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8CB522185B21AC00D0CD9D /* det_icon_29x29@2x.png */; };
+		CC8CB526185B21AC00D0CD9D /* det_icon_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8CB523185B21AC00D0CD9D /* det_icon_40x40@2x.png */; };
 		CCAC49371839CAE700C70E79 /* DTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC49361839CAE600C70E79 /* DTColors.m */; };
 		CCAC493E1839FAA800C70E79 /* DTFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC493D1839FAA800C70E79 /* DTFonts.m */; };
 		CCAC49491839FB5500C70E79 /* add_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAC49421839FB5500C70E79 /* add_button@2x.png */; };
@@ -119,6 +122,9 @@
 		122F87FC6A6446D2B17762A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8CB51D185B1D8400D0CD9D /* DTGreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGreenButton.h; path = Views/DTGreenButton.h; sourceTree = "<group>"; };
 		CC8CB51E185B1D8400D0CD9D /* DTGreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGreenButton.m; path = Views/DTGreenButton.m; sourceTree = "<group>"; };
+		CC8CB521185B21AC00D0CD9D /* det_icon_60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "det_icon_60x60@2x.png"; sourceTree = "<group>"; };
+		CC8CB522185B21AC00D0CD9D /* det_icon_29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "det_icon_29x29@2x.png"; sourceTree = "<group>"; };
+		CC8CB523185B21AC00D0CD9D /* det_icon_40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "det_icon_40x40@2x.png"; sourceTree = "<group>"; };
 		CCAC49351839CAE600C70E79 /* DTColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTColors.h; path = Utilities/DTColors.h; sourceTree = "<group>"; };
 		CCAC49361839CAE600C70E79 /* DTColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTColors.m; path = Utilities/DTColors.m; sourceTree = "<group>"; };
 		CCAC493C1839FAA800C70E79 /* DTFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTFonts.h; path = Utilities/DTFonts.h; sourceTree = "<group>"; };
@@ -319,6 +325,16 @@
 			name = Transaction;
 			sourceTree = "<group>";
 		};
+		CC8CB520185B21AC00D0CD9D /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				CC8CB521185B21AC00D0CD9D /* det_icon_60x60@2x.png */,
+				CC8CB522185B21AC00D0CD9D /* det_icon_29x29@2x.png */,
+				CC8CB523185B21AC00D0CD9D /* det_icon_40x40@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
 		CCAC493B1839FA9300C70E79 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +349,7 @@
 		CCAC49401839FB5500C70E79 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC8CB520185B21AC00D0CD9D /* icon */,
 				CCAC49411839FB5500C70E79 /* assets */,
 				CCAC49431839FB5500C70E79 /* fonts */,
 			);
@@ -458,14 +475,17 @@
 			files = (
 				08CB067518173A2900C96236 /* Images.xcassets in Resources */,
 				CCD51EFD183C88C0005772B9 /* dollar_symbol@2x.png in Resources */,
+				CC8CB526185B21AC00D0CD9D /* det_icon_40x40@2x.png in Resources */,
 				CCAC49491839FB5500C70E79 /* add_button@2x.png in Resources */,
 				CCAC494C1839FB5500C70E79 /* ProximaNova-Sbold.ttf in Resources */,
 				CCAC494E1839FB5500C70E79 /* ProximaNova-Xbold.ttf in Resources */,
+				CC8CB525185B21AC00D0CD9D /* det_icon_29x29@2x.png in Resources */,
 				CCAC494D1839FB5500C70E79 /* ProximaNova-SboldIt.otf in Resources */,
 				CCAC494A1839FB5500C70E79 /* ProximaNova-Bold.ttf in Resources */,
 				CCAC494B1839FB5500C70E79 /* ProximaNova-Reg.ttf in Resources */,
 				08CB066718173A2900C96236 /* InfoPlist.strings in Resources */,
 				CCF9C5F2185AF46F00E8E3A8 /* next_button@2x.png in Resources */,
+				CC8CB524185B21AC00D0CD9D /* det_icon_60x60@2x.png in Resources */,
 				CCF9C5F6185B03E100E8E3A8 /* default_user@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
