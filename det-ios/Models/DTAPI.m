@@ -59,6 +59,7 @@
                      }];
                  }];
              } else {
+                 [newFBUser setObject:user.id forKey:@"username"];
                  [newFBUser setObject:[user objectForKey:@"email"] forKey:@"email"];
                  [newFBUser setObject:user.name forKey:@"name"];
                  [newFBUser setObject:user.id forKey:@"fbID"];

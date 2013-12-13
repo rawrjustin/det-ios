@@ -10,4 +10,5 @@
 
 @interface DTHomeSummaryView : UIView
 
+- (void)setOwedToYou:(double)owed andYouOwe:(double)owe;
 @end

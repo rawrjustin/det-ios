@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DTColors : NSObject
+@interface DTColors : UIColor
 
 + (UIColor*)colorForGreen;
 + (UIColor*)colorForRed;

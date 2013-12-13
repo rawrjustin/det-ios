@@ -51,9 +51,9 @@
         self.oweLabel.textColor = [UIColor whiteColor];
         [self.contentView addSubview:self.oweLabel];
         
-        
-        self.layer.cornerRadius = 4.0;
-        self.contentView.layer.cornerRadius = 4.0;
+//        
+//        self.layer.cornerRadius = 4.0;
+//        self.contentView.layer.cornerRadius = 4.0;
         self.contentView.clipsToBounds = YES;
         
         
@@ -70,7 +70,7 @@
     self.amountLabel.textColor = (amount >= 0.0) ? [DTColors colorForGreen] : [DTColors colorForRed];
     [self.amountLabel sizeToFit];
     
-    self.oweLabel.text = (amount >= 0.0) ? @"owed" : @"owes";
+    self.oweLabel.text = (amount >= 0.0) ? @"owes" : @"owed";
     
     
     // Position Elements so that both of them together are centered.

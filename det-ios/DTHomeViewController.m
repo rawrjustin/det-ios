@@ -7,6 +7,7 @@
 //
 
 #import "DTHomeViewController.h"
+#import "DTHomeSummaryView.h"
 #import "UserInfo.h"
 #import "DTAPI.h"
 #import "DTUser.h"
@@ -22,6 +23,12 @@
 @property (nonatomic, strong) DTTransactionView *transactionView;
 
 @property (nonatomic, strong) UIView *header;
+
+@property (nonatomic, strong) DTHomeSummaryView *summaryView;
+
+@property (nonatomic, strong) UIButton *addDebtButton;
+
+@property (nonatomic) BOOL isAddingDebt;
 @end
 
 static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
@@ -34,53 +41,40 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
     if (self) {
         // Custom initialization
         self.view.backgroundColor = [UIColor whiteColor];
+        self.isAddingDebt = NO;
     }
     return self;
 }
-
-/*
-{
-    "123": {
-        "name": "justin",
-        "email": "justingotemail@gmail.com",
-        "amount": 50
-    },
-    “456”: {
-        ...
-        
-    }
-    "fbIdentifiers": [
-                      "123", “456”
-                      ],
-    "creditor": "9t6UZpDJnp",
-    "description": "CLOUD CODE WORKS"
-}
- */
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setupTableView];
     [self setupTransactionView];
-//    
-//    [PFCloud callFunctionInBackground:@"createTransaction"
-//                       withParameters:@{@"571815533": @{
-//                                                @"name":    @"Allen Wu",
-//                                                @"email":   @"wua05@ucla.edu",
-//                                                @"amount":  @50
-//                                        },
-//                                        @"fbIdentifiers":   @[@"571815533"],
-//                                        @"creditor":    @"x5SLz4374r",
-//                                        @"description": @"Cloud code works"
-//                                        }
-//                                block:^(NSNumber *ratings, NSError *error) {
-//                                    if (!error) {
-//                                        [self pullData];
-//                                    }
-//                                }];
+    
+    //[self createDummyData];
     
     [self setupHeaderBar];
+    [self setupSummary];
     [self.debtsList registerClass:[DTSummaryBlock class] forCellWithReuseIdentifier:kSummaryBlockIdentifier];
+}
+
+- (void)createDummyData {
+    [PFCloud callFunctionInBackground:@"createTransaction"
+                       withParameters:@{@"571815533": @{
+                                                @"name":    @"Allen Wu",
+                                                @"email":   @"wua05@ucla.edu",
+                                                @"amount":  @50
+                                                },
+                                        @"fbIdentifiers":   @[@"571815533"],
+                                        @"user":    @"x5SLz4374r",
+                                        @"description": @"Allen owes me for strippers"
+                                        }
+                                block:^(NSNumber *ratings, NSError *error) {
+                                    if (!error) {
+                                        [self pullData];
+                                    }
+                                }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -95,12 +89,30 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
         [DTAPI debtList:^(NSArray * debts) {
             [[UserInfo sharedInstance] parseDebtData:debts];
             [self.debtsList reloadData];
+            [self.summaryView setOwedToYou:[UserInfo sharedInstance].owed andYouOwe:[UserInfo sharedInstance].owe];
         }];
+    }
+}
+
+- (void)createTransaction:(NSDictionary*)params {
+    if (params) {
+        [PFCloud callFunctionInBackground:@"createTransaction"
+                           withParameters:params
+                                    block:^(NSNumber *ratings, NSError *error) {
+                                        if (!error) {
+                                            [self pullData];
+                                        }
+                                        }];
     }
 }
 
 #pragma mark - 
 #pragma mark - View Setup
+
+- (void)setupSummary {
+    self.summaryView = [[DTHomeSummaryView alloc] initWithFrame:CGRectMake(0, 64.0f + 10.0f, [UIScreen mainScreen].bounds.size.width, 50.0f)];
+    [self.view addSubview:self.summaryView];
+}
 
 - (void)setupHeaderBar {
     self.header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64.0f)];
@@ -114,10 +126,11 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
     headertitle.text = @"debttrack";
     [self.header addSubview:headertitle];
     
-    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [addButton setImage:[UIImage imageNamed:@"add_button"] forState:UIControlStateNormal];
-    [addButton setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 40.0f - 10.0f, 22.0f, 40.0f, 40.0f)];
-    [self.header addSubview:addButton];
+    self.addDebtButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.addDebtButton setImage:[UIImage imageNamed:@"add_button"] forState:UIControlStateNormal];
+    [self.addDebtButton addTarget:self action:@selector(startNewDebt) forControlEvents:UIControlEventTouchUpInside];
+    [self.addDebtButton setFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 40.0f - 10.0f, 22.0f, 40.0f, 40.0f)];
+    [self.header addSubview:self.addDebtButton];
 }
 
 - (void)setupTableView {
@@ -125,7 +138,7 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
     DTSummaryLayout *summaryLayout = [[DTSummaryLayout alloc] init];
     
     // Collection View
-    self.debtsList = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) collectionViewLayout:summaryLayout];
+    self.debtsList = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64.0f + 50.0f + 10.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) collectionViewLayout:summaryLayout];
     self.debtsList.delegate = self;
     self.debtsList.dataSource = self;
     self.debtsList.backgroundColor = [UIColor clearColor];
@@ -133,19 +146,15 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
 }
 
 - (void)setupTransactionView {
-    self.transactionView = [[DTTransactionView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 50.0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    self.transactionView = [[DTTransactionView alloc] initWithFrame:CGRectMake(0, 64.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64.0f)];
     self.transactionView.delegate = self;
-    //[self.view addSubview:self.transactionView];
+    self.transactionView.alpha = 0.0;
+    [self.view addSubview:self.transactionView];
+    [self.view sendSubviewToBack:self.transactionView];
 }
 
 #pragma mark -
 #pragma mark - TransactionView delegates
-
-- (void)revealTransactionInput {
-    [UIView animateWithDuration:0.3 animations:^{
-        self.transactionView.center = self.view.center;
-    }];
-}
 
 - (void)cancelTransaction {
     [UIView animateWithDuration:0.3                                                                                                                                                                                      animations:^{
@@ -154,6 +163,39 @@ static NSString * const kSummaryBlockIdentifier = @"SummaryBlock";
         [self.transactionView resetScreens];
     }];
 }
+
+#pragma mark - 
+#pragma mark - Actions
+
+- (void)startNewDebt {
+    self.addDebtButton.userInteractionEnabled = NO;
+    [UIView animateWithDuration:0.5 delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        if (_isAddingDebt) {
+            self.summaryView.alpha = 1.0;
+            self.debtsList.frame = CGRectMake(0, 64.0f + 50.0f + 10.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+            self.debtsList.alpha = 1.0;
+            self.addDebtButton.transform = CGAffineTransformRotate(self.addDebtButton.transform, -M_PI_4);
+            //MAKE SURE TO RESET TRANSACTION VIEW
+            [self.transactionView resetScreens];
+            self.transactionView.alpha = 0.0;
+            _isAddingDebt = NO;
+        } else {
+            [self.view endEditing:YES];
+            self.summaryView.alpha = 0.0;
+            self.debtsList.center = CGPointMake(self.debtsList.center.x, self.debtsList.center.y + [UIScreen mainScreen].bounds.size.height);
+            self.addDebtButton.transform = CGAffineTransformRotate(self.addDebtButton.transform, M_PI_4);
+            self.transactionView.alpha = 1.0;
+            _isAddingDebt = YES;
+        }
+        
+    } completion:^(BOOL completion) {
+        if (_isAddingDebt) {
+            [self.transactionView startNewDebt];
+        }
+        self.addDebtButton.userInteractionEnabled = YES;
+    }];
+}
+
 
 #pragma mark -
 #pragma mark - UICollectionView Datasource

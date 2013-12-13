@@ -12,7 +12,8 @@
 @property (nonatomic, retain) NSMutableDictionary *debts;
 @property (nonatomic, retain) NSArray *sortedKeys;
 @property (nonatomic, retain) NSMutableDictionary *userLinks;
-
+@property (nonatomic) double owed;
+@property (nonatomic) double owe;
 + (UserInfo *)sharedInstance;
 - (void)parseDebtData:(NSArray*)data;
 

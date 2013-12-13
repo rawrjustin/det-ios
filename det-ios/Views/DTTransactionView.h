@@ -11,13 +11,18 @@
 @protocol DTTransactionDelegate
 - (void)revealTransactionInput;
 - (void)cancelTransaction;
+- (void)createTransaction:(NSDictionary*)params;
+
 @end
 
-@interface DTTransactionView : UIView
+@interface DTTransactionView : UIView <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, unsafe_unretained) id<DTTransactionDelegate> delegate;
-@property (nonatomic, strong) UITextField *amount;
 @property (nonatomic, strong) UITextField *description;
 
+// Reset Screens to Original State
 - (void)resetScreens;
+
+// Start a new Debt
+- (void)startNewDebt;
 @end

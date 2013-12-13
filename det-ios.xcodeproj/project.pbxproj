@@ -40,6 +40,7 @@
 		08CB4094181A4C1B00D1F3F7 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4093181A4C1B00D1F3F7 /* UserInfo.m */; };
 		08CB4098181A5A7A00D1F3F7 /* DTTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */; };
 		6F6296FBE7074E1FB388551B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122F87FC6A6446D2B17762A2 /* libPods.a */; };
+		CC8CB51F185B1D8400D0CD9D /* DTGreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8CB51E185B1D8400D0CD9D /* DTGreenButton.m */; };
 		CCAC49371839CAE700C70E79 /* DTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC49361839CAE600C70E79 /* DTColors.m */; };
 		CCAC493E1839FAA800C70E79 /* DTFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAC493D1839FAA800C70E79 /* DTFonts.m */; };
 		CCAC49491839FB5500C70E79 /* add_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCAC49421839FB5500C70E79 /* add_button@2x.png */; };
@@ -52,6 +53,12 @@
 		CCD2BE561835F14000CC2389 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2BE551835F14000CC2389 /* FacebookSDK.framework */; };
 		CCD2BE591835FA6400CC2389 /* DTSummaryBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD2BE581835FA6400CC2389 /* DTSummaryBlock.m */; };
 		CCD2BE5F1835FDAC00CC2389 /* DTSummaryLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD2BE5E1835FDAC00CC2389 /* DTSummaryLayout.m */; };
+		CCD51EFD183C88C0005772B9 /* dollar_symbol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCD51EFC183C88C0005772B9 /* dollar_symbol@2x.png */; };
+		CCD51F03183CAE5F005772B9 /* DTNumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD51F02183CAE5F005772B9 /* DTNumberLabel.m */; };
+		CCD51F06183CAE69005772B9 /* DTDecimalLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD51F05183CAE69005772B9 /* DTDecimalLabel.m */; };
+		CCF9C5F2185AF46F00E8E3A8 /* next_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF9C5F1185AF46F00E8E3A8 /* next_button@2x.png */; };
+		CCF9C5F6185B03E100E8E3A8 /* default_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF9C5F5185B03E100E8E3A8 /* default_user@2x.png */; };
+		CCF9C5F9185B059F00E8E3A8 /* DTFacebookFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF9C5F8185B059F00E8E3A8 /* DTFacebookFriendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +117,8 @@
 		08CB4096181A5A7A00D1F3F7 /* DTTransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTransactionView.h; path = Views/DTTransactionView.h; sourceTree = "<group>"; };
 		08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTransactionView.m; path = Views/DTTransactionView.m; sourceTree = "<group>"; };
 		122F87FC6A6446D2B17762A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8CB51D185B1D8400D0CD9D /* DTGreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGreenButton.h; path = Views/DTGreenButton.h; sourceTree = "<group>"; };
+		CC8CB51E185B1D8400D0CD9D /* DTGreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGreenButton.m; path = Views/DTGreenButton.m; sourceTree = "<group>"; };
 		CCAC49351839CAE600C70E79 /* DTColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTColors.h; path = Utilities/DTColors.h; sourceTree = "<group>"; };
 		CCAC49361839CAE600C70E79 /* DTColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTColors.m; path = Utilities/DTColors.m; sourceTree = "<group>"; };
 		CCAC493C1839FAA800C70E79 /* DTFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTFonts.h; path = Utilities/DTFonts.h; sourceTree = "<group>"; };
@@ -127,6 +136,15 @@
 		CCD2BE581835FA6400CC2389 /* DTSummaryBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTSummaryBlock.m; path = Views/DTSummaryBlock.m; sourceTree = "<group>"; };
 		CCD2BE5D1835FDAC00CC2389 /* DTSummaryLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSummaryLayout.h; sourceTree = "<group>"; };
 		CCD2BE5E1835FDAC00CC2389 /* DTSummaryLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSummaryLayout.m; sourceTree = "<group>"; };
+		CCD51EFC183C88C0005772B9 /* dollar_symbol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar_symbol@2x.png"; sourceTree = "<group>"; };
+		CCD51F01183CAE5F005772B9 /* DTNumberLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTNumberLabel.h; path = Views/DTNumberLabel.h; sourceTree = "<group>"; };
+		CCD51F02183CAE5F005772B9 /* DTNumberLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTNumberLabel.m; path = Views/DTNumberLabel.m; sourceTree = "<group>"; };
+		CCD51F04183CAE69005772B9 /* DTDecimalLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDecimalLabel.h; path = Views/DTDecimalLabel.h; sourceTree = "<group>"; };
+		CCD51F05183CAE69005772B9 /* DTDecimalLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDecimalLabel.m; path = Views/DTDecimalLabel.m; sourceTree = "<group>"; };
+		CCF9C5F1185AF46F00E8E3A8 /* next_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_button@2x.png"; sourceTree = "<group>"; };
+		CCF9C5F5185B03E100E8E3A8 /* default_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_user@2x.png"; sourceTree = "<group>"; };
+		CCF9C5F7185B059F00E8E3A8 /* DTFacebookFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTFacebookFriendCell.h; path = Views/DTFacebookFriendCell.h; sourceTree = "<group>"; };
+		CCF9C5F8185B059F00E8E3A8 /* DTFacebookFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTFacebookFriendCell.m; path = Views/DTFacebookFriendCell.m; sourceTree = "<group>"; };
 		D89EFBF66951406A921AD6A2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,7 +234,7 @@
 			children = (
 				CCAC49401839FB5500C70E79 /* resources */,
 				CCD2BE6018360E6900CC2389 /* Home */,
-				08CB4095181A5A5F00D1F3F7 /* Views */,
+				08CB4095181A5A5F00D1F3F7 /* Transaction */,
 				08CB3FFA1817C82300D1F3F7 /* Models */,
 				08CB3FF618174C6100D1F3F7 /* ViewControllers */,
 				08CB066B18173A2900C96236 /* DTAppDelegate.h */,
@@ -284,15 +302,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		08CB4095181A5A5F00D1F3F7 /* Views */ = {
+		08CB4095181A5A5F00D1F3F7 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
 				08CB4096181A5A7A00D1F3F7 /* DTTransactionView.h */,
 				08CB4097181A5A7A00D1F3F7 /* DTTransactionView.m */,
-				CCAC4952183A090900C70E79 /* DTHomeSummaryView.h */,
-				CCAC4953183A090900C70E79 /* DTHomeSummaryView.m */,
+				CCD51F01183CAE5F005772B9 /* DTNumberLabel.h */,
+				CCD51F02183CAE5F005772B9 /* DTNumberLabel.m */,
+				CCD51F04183CAE69005772B9 /* DTDecimalLabel.h */,
+				CCD51F05183CAE69005772B9 /* DTDecimalLabel.m */,
+				CCF9C5F7185B059F00E8E3A8 /* DTFacebookFriendCell.h */,
+				CCF9C5F8185B059F00E8E3A8 /* DTFacebookFriendCell.m */,
+				CC8CB51D185B1D8400D0CD9D /* DTGreenButton.h */,
+				CC8CB51E185B1D8400D0CD9D /* DTGreenButton.m */,
 			);
-			name = Views;
+			name = Transaction;
 			sourceTree = "<group>";
 		};
 		CCAC493B1839FA9300C70E79 /* Utilities */ = {
@@ -318,6 +342,9 @@
 		CCAC49411839FB5500C70E79 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				CCF9C5F5185B03E100E8E3A8 /* default_user@2x.png */,
+				CCF9C5F1185AF46F00E8E3A8 /* next_button@2x.png */,
+				CCD51EFC183C88C0005772B9 /* dollar_symbol@2x.png */,
 				CCAC49421839FB5500C70E79 /* add_button@2x.png */,
 			);
 			path = assets;
@@ -338,6 +365,8 @@
 		CCD2BE6018360E6900CC2389 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CCAC4952183A090900C70E79 /* DTHomeSummaryView.h */,
+				CCAC4953183A090900C70E79 /* DTHomeSummaryView.m */,
 				CCD2BE571835FA6400CC2389 /* DTSummaryBlock.h */,
 				CCD2BE581835FA6400CC2389 /* DTSummaryBlock.m */,
 				CCD2BE5D1835FDAC00CC2389 /* DTSummaryLayout.h */,
@@ -428,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CB067518173A2900C96236 /* Images.xcassets in Resources */,
+				CCD51EFD183C88C0005772B9 /* dollar_symbol@2x.png in Resources */,
 				CCAC49491839FB5500C70E79 /* add_button@2x.png in Resources */,
 				CCAC494C1839FB5500C70E79 /* ProximaNova-Sbold.ttf in Resources */,
 				CCAC494E1839FB5500C70E79 /* ProximaNova-Xbold.ttf in Resources */,
@@ -435,6 +465,8 @@
 				CCAC494A1839FB5500C70E79 /* ProximaNova-Bold.ttf in Resources */,
 				CCAC494B1839FB5500C70E79 /* ProximaNova-Reg.ttf in Resources */,
 				08CB066718173A2900C96236 /* InfoPlist.strings in Resources */,
+				CCF9C5F2185AF46F00E8E3A8 /* next_button@2x.png in Resources */,
+				CCF9C5F6185B03E100E8E3A8 /* default_user@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +526,14 @@
 				CCD2BE591835FA6400CC2389 /* DTSummaryBlock.m in Sources */,
 				08CB066D18173A2900C96236 /* DTAppDelegate.m in Sources */,
 				CCD2BE5F1835FDAC00CC2389 /* DTSummaryLayout.m in Sources */,
+				CCD51F06183CAE69005772B9 /* DTDecimalLabel.m in Sources */,
+				CCF9C5F9185B059F00E8E3A8 /* DTFacebookFriendCell.m in Sources */,
 				CCAC4954183A090900C70E79 /* DTHomeSummaryView.m in Sources */,
+				CCD51F03183CAE5F005772B9 /* DTNumberLabel.m in Sources */,
 				08CB4091181A4B4D00D1F3F7 /* DTHomeViewController.m in Sources */,
 				08CB069818173C7B00C96236 /* det.xcdatamodeld in Sources */,
 				08CB4094181A4C1B00D1F3F7 /* UserInfo.m in Sources */,
+				CC8CB51F185B1D8400D0CD9D /* DTGreenButton.m in Sources */,
 				08CB40061817C82300D1F3F7 /* DTUser.m in Sources */,
 				CCAC49371839CAE700C70E79 /* DTColors.m in Sources */,
 				08CB066918173A2900C96236 /* main.m in Sources */,
@@ -621,6 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Justin Huang (3V89HRH4TP)";
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/rawrjustin/Documents/FacebookSDK,
 					"$(inherited)",
@@ -642,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/rawrjustin/Documents/FacebookSDK,
 					"$(inherited)",

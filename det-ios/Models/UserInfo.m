@@ -26,6 +26,8 @@
 //        instance.debts = [NSMutableDictionary dictionary];
 //        instance.sortedKeys = [NSArray array];
 //        instance.userLinks = [NSMutableDictionary dictionary];
+        instance.owed = 0.0;
+        instance.owe = 0.0;
     }
     return instance;
 }
@@ -43,10 +45,12 @@
                 NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:[amount doubleValue] - debt.amount],
                                                  @"name" : debt.creditor.name};
                 [debtCopy setObject:debtDictionary forKey:debt.creditor.facebookID];
+                self.owe += fabs(debt.amount);
             } else {
                 NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:-debt.amount],
                                                  @"name" : debt.creditor.name};
                 [debtCopy setObject:debtDictionary forKey:debt.creditor.facebookID];
+                self.owe += fabs(debt.amount);
             }
         } else if ([debt.creditor.facebookID isEqualToString:myFBid]){
             [self.userLinks setObject:debt.debtor forKey:debt.debtor.facebookID];
@@ -57,10 +61,12 @@
                 NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:[amount doubleValue] + debt.amount],
                                                  @"name" : debt.debtor.name};
                 [debtCopy setObject:debtDictionary forKey:debt.debtor.facebookID];
+                self.owed += debt.amount;
             } else {
                 NSDictionary *debtDictionary = @{@"amount" : [NSNumber numberWithDouble:debt.amount],
                                                  @"name" : debt.debtor.name};
                 [debtCopy setObject:debtDictionary forKey:debt.debtor.facebookID];
+                self.owed += debt.amount;
             }
         } else {
             NSLog(@"SOMETHING WENT WRONG IN USERINFO");
